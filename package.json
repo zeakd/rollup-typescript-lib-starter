@@ -1,0 +1,51 @@
+{
+  "name": "my-lib",
+  "version": "1.0.0",
+  "description": "my lib description",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "prebuild": "npm run clean",
+    "dev": "rollup -c -w",
+    "predev": "npm run clean",
+    "lint": "eslint --ext js,ts src",
+    "clean": "del es/ lib/ dist/ types/",
+    "test": "jest"
+  },
+  "main": "lib/my-lib.js",
+  "unpkg": "dist/my-lib.js",
+  "module": "es/my-lib.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://yourgit"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-typescript": "^4.0.0",
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "rollup": "^2.0.3",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "tslib": "^1.11.1"
+  }
+}
